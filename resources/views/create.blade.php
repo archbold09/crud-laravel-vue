@@ -14,7 +14,7 @@
                     <span v-for="error in errors" class="text-danger">@{{error}}</span>
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" value="Agregar" >
+                    <v-btn small outline type="submit" color="green"> <v-icon>done</v-icon> </v-btn>
                 </div>
                 
             </div>

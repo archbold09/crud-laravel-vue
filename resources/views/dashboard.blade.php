@@ -3,18 +3,17 @@
 @section('content')
 
     <div class="row" id="app">
-        <div class="col-xs-12">
-            <h1 class="page-header"> Crud Laravel + Vue :)</h1>
+        <div class="col-sm-12">
+            <h1 class="headline"> Crud Laravel + Vue :)</h1>
         </div>
         <div class="col-sm-7">
-            <a href="#" class="btn btn-success pull-right" data-toggle="modal" data-target="#create">Agregar habilidad</a>
-                <table class="table table-dark table-hover table-striped">
+            <v-btn outline color="teal" data-toggle="modal" data-target="#create">Agregar habilidad</v-btn>
+                <table class="table table-hover table-striped">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Hablidad</th>
-                    <th colspan="2">
-                        &nbsp;
+                    <th colspan="4">Opciones
                     </th>
                 </tr>
                 </thead>
@@ -23,12 +22,12 @@
                     <th width="10px" scope="row"> @{{habilidad.id}} </th>
                     <td> @{{habilidad.habilidad}} </td>
                     <td>
-                        <a href="#" class="btn btn-info btn-sm" v-on:click.prevent="editHabilidad(habilidad)"
-                        >Editar</a>
+                        <v-btn icon small outline color="blue" v-on:click.prevent="editHabilidad(habilidad)"
+                        ><v-icon small >edit</v-icon></v-btn>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="deleteHabilidad(habilidad)"
-                        >Eliminar</a>
+                        <v-btn icon small outline color="red" v-on:click.prevent="deleteHabilidad(habilidad)"
+                        ><v-icon small >delete</v-icon></v-btn>
                     </td>
                 </tr>
                 </tbody>
